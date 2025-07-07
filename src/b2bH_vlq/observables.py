@@ -319,6 +319,7 @@ PHYSICS_GROUPS = {
     "event": event_vars,
 }
 
+
 def get_variable_group_names() -> list[str]:
     """
     Get the names of all variable groups.
@@ -327,6 +328,7 @@ def get_variable_group_names() -> list[str]:
         list[str]: List of group names.
     """
     return list(PHYSICS_GROUPS.keys())
+
 
 def get_variables_by_group(group_name: str) -> dict:
     """

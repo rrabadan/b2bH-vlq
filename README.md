@@ -1,1 +1,1 @@
-$B \to bH(\gemma\gamma)$ pheno analysis.
+$B \to bH(\gamma\gamma)$ pheno analysis.
