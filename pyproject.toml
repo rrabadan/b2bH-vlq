@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "jupyter>=1.1.1",
     "uproot>=5.6.2",
-    "anaheptools"
+    "hepkit"
 ]
 
 [project.optional-dependencies]
@@ -21,7 +21,7 @@ dev = [
 ]
 
 [tool.uv.sources]
-anaheptools = { workspace = true}
+hepkit = { workspace = true}
 
 [tool.uv.workspace]
 members = [".", "packages/anaheptools"]
@@ -36,6 +36,7 @@ packages = ["src/b2bH_vlq"]
 [tool.black]
 line-length = 100
 target-version = ["py312"]
+# include = '\.pyi?$'
 
 [tool.isort]
 profile = "black"
@@ -54,11 +55,16 @@ select = [
     "B",  # flake8-bugbear
     "C4", # flake8-comprehensions
     "UP", # pyupgrade
+    "N"
 ]
 ignore = [
     "E501",  # line too long, handled by black
+    "B006",  # Do not use mutable data structures for argument defaults
     "B008",  # do not perform function calls in argument defaults
+    "N803",  # Argument name should be lowercase
+    "N806",  # Variable in function should be lowercase
     "C901",  # too complex
+
 ]
 
 [tool.mypy]
@@ -75,3 +81,4 @@ warn_unused_ignores = true
 warn_no_return = true
 warn_unreachable = true
 strict_equality = true
+exclude = ["build", "dist", "__pycache__", ".venv"]

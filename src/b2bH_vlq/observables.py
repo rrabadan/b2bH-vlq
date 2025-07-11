@@ -1,4 +1,4 @@
-from anaheptools.variables import Var
+from hepkit.variables import Var
 
 leading_photon_vars = [
     Var(
