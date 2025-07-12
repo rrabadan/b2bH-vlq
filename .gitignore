@@ -12,3 +12,6 @@ wheels/
 # other files
 *.root
 !data/*.root
+
+# catboost_info
+notebooks/catboost_info/
