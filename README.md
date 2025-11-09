@@ -40,7 +40,6 @@ uv sync
 This will:
 - Create a virtual environment automatically
 - Install the main package (`b2bH-vlq`) and its dependencies
-- Install the workspace member `hepkit` from the `packages/anaheptools` submodule
 - Install development tools (if using `--dev` flag)
 
 ## Usage
@@ -88,7 +87,6 @@ The analysis uses ROOT files located in the `data/` directory:
 
 ```
 ├── src/b2bH_vlq/         # Main analysis package
-├── packages/anaheptools/ # Submodule with analysis tools (hepkit)
 ├── notebooks/            # Jupyter notebooks for analysis
 ├── data/                 # ROOT data files
 └── pyproject.toml        # Project configuration
