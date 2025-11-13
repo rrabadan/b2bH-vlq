@@ -7,7 +7,9 @@ requires-python = ">=3.13"
 dependencies = [
     "jupyter>=1.1.1",
     "uproot>=5.6.2",
-    "hepkit @ git+https://github.com/rrabadan/hepkit.git@python-3.13"
+    "hepkit @ git+https://github.com/rrabadan/hepkit.git@python-3.13",
+    "catboost>=1.2.8",
+    "xgboost>=3.1.1",
 ]
 
 [project.optional-dependencies]
