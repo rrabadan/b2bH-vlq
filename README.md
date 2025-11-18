@@ -10,22 +10,35 @@ $B \to bH(\gamma\gamma)$ selection
 
 ## Installation
 
-### 1. Clone the Repository with Submodules
-
-This project uses submodules for the `anaheptools` package. Clone the repository with all submodules:
+### 1. Clone the Repository
 
 ```bash
-git clone --recursive https://github.com/rrabadan/b2bH-vlq.git
-cd b2bH-vql
+git clone https://github.com/rrabadan/b2bH-vlq.git
+cd b2bH-vlq
 ```
 
-If you've already cloned the repository without submodules, initialize them:
+### 2. Download Data Files (Git LFS)
+
+The data files are stored using Git LFS. Make sure you have Git LFS installed and pull the data files:
 
 ```bash
-git submodule update --init --recursive
+# Install Git LFS (if not already installed)
+# On Ubuntu/Debian: sudo apt install git-lfs
+# On macOS: brew install git-lfs
+# On Windows: Download from https://git-lfs.github.io/
+
+# Initialize Git LFS and pull data files
+git lfs install
+git lfs pull
 ```
 
-### 2. Install Dependencies with uv
+### 3. Install Dependencies with uv
+
+Install uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
 Install the project and all dependencies using uv:
 
@@ -33,7 +46,7 @@ Install the project and all dependencies using uv:
 # Install the project in development mode
 uv sync --dev
 
-# Or for production (without dev dependencies)
+# Or without dev dependencies
 uv sync
 ```
 
