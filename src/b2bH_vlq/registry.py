@@ -2,42 +2,42 @@ import re
 
 from .observables import (
     Var,
-    bjet_vars,
-    delta_r_vars,
-    diphoton_vars,
+    deltaR,
+    diphoton,
     event_vars,
-    forward_jet_vars,
-    leading_photon_vars,
-    mass_vars,
-    subleading_bjet_vars,
-    subleading_photon_vars,
-    vlq_vars,
+    forward_jet,
+    leading_bjet,
+    leading_photon,
+    masses,
+    subleading_bjet,
+    subleading_photon,
+    vlq,
 )
 
 ALL_VARIABLES = (
-    leading_photon_vars
-    + subleading_photon_vars
-    + diphoton_vars
-    + bjet_vars
-    + subleading_bjet_vars
-    + forward_jet_vars
+    leading_photon
+    + subleading_photon
+    + diphoton
+    + leading_bjet
+    + subleading_bjet
+    + forward_jet
     + event_vars
-    + vlq_vars
-    + delta_r_vars
-    + mass_vars
+    + vlq
+    + deltaR
+    + masses
 )
 
 PHYSICS_GROUPS = {
-    "vlq": vlq_vars,
-    "photon-1": leading_photon_vars,
-    "photon-2": subleading_photon_vars,
-    "diphoton": diphoton_vars,
-    "b-jet-1": bjet_vars,
-    "b-jet-2": subleading_bjet_vars,
-    "fwd-jet": forward_jet_vars,
+    "vlq": vlq,
+    "photon1": leading_photon,
+    "photon2": subleading_photon,
+    "diphoton": diphoton,
+    "bjet1": leading_bjet,
+    "bjet2": subleading_bjet,
+    "fwdjet": forward_jet,
     "event": event_vars,
-    "deltaR": delta_r_vars,
-    "masses": mass_vars,
+    "deltaR": deltaR,
+    "masses": masses,
 }
 
 

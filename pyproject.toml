@@ -57,6 +57,7 @@ ignore = [
     "B008",  # do not perform function calls in argument defaults
     "N803",  # Argument name should be lowercase
     "N806",  # Variable in function should be lowercase
+    "N816",  # Variable in global scope should not be mixedCase
     "N999",  # Dunder name not recognized
 ]
 

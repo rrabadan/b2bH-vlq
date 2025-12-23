@@ -1,12 +1,12 @@
 from hepkit.variables import Var
 
-leading_photon_vars = [
+leading_photon = [
     Var(
         name="photon1_pt",
         description="Leading photon transverse momentum",
         label=r"$p_{T, \gamma_1}$",
         x_title=r"$p_{T, \gamma_1}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1000),
         unit="GeV/c",
         input_branches=["lp_pt"],
     ),
@@ -20,15 +20,6 @@ leading_photon_vars = [
         input_branches=["lp_phi"],
     ),
     Var(
-        name="photon1_y",
-        description="Leading photon rapidity",
-        label=r"$y_{\gamma_!}$",
-        x_title=r"$y_{\gamma_1}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["lp_y"],
-    ),
-    Var(
         name="photon1_eta",
         description="Leading photon pseudorapidity",
         label=r"$\eta_{\gamma_1}$",
@@ -37,15 +28,24 @@ leading_photon_vars = [
         unit="",
         input_branches=["lp_eta"],
     ),
+    Var(
+        name="photon1_y",
+        description="Leading photon rapidity",
+        label=r"$y_{\gamma_!}$",
+        x_title=r"$y_{\gamma_1}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["lp_y"],
+    ),
 ]
 
-subleading_photon_vars = [
+subleading_photon = [
     Var(
         name="photon2_pt",
         description="Subleading photon transverse momentum",
         label=r"$p_{T, \gamma_2}$",
         x_title=r"$p_{T, \gamma_2}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1000),
         unit="GeV/c",
         input_branches=["slp_pt"],
     ),
@@ -59,15 +59,6 @@ subleading_photon_vars = [
         input_branches=["slp_phi"],
     ),
     Var(
-        name="photon2_y",
-        description="Subleading photon rapidity",
-        label=r"$y_{\gamma_2}$",
-        x_title=r"$y_{\gamma_2}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["slp_y"],
-    ),
-    Var(
         name="photon2_eta",
         description="Subleading photon pseudorapidity",
         label=r"$\eta_{\gamma_2}$",
@@ -76,15 +67,24 @@ subleading_photon_vars = [
         unit="",
         input_branches=["slp_eta"],
     ),
+    Var(
+        name="photon2_y",
+        description="Subleading photon rapidity",
+        label=r"$y_{\gamma_2}$",
+        x_title=r"$y_{\gamma_2}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["slp_y"],
+    ),
 ]
 
-diphoton_vars = [
+diphoton = [
     Var(
         name="diphoton_pt",
         description="Diphoton transverse momentum",
         label=r"$p_{T, \gamma\gamma}$",
         x_title=r"$p_{T, \gamma\gamma}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1500),
         unit="GeV/c",
         input_branches=["Dipho_Pt"],
     ),
@@ -98,15 +98,6 @@ diphoton_vars = [
         input_branches=["Dipho_Phi"],
     ),
     Var(
-        name="diphoton_y",
-        description="Diphoton rapidity",
-        label=r"$y_{\gamma\gamma}$",
-        x_title=r"$y_{\gamma\gamma}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["Dipho_y"],
-    ),
-    Var(
         name="diphoton_eta",
         description="Diphoton pseudorapidity",
         label=r"$\eta_{\gamma\gamma}$",
@@ -115,14 +106,23 @@ diphoton_vars = [
         unit="",
         input_branches=["Dipho_Eta"],
     ),
+    Var(
+        name="diphoton_y",
+        description="Diphoton rapidity",
+        label=r"$y_{\gamma\gamma}$",
+        x_title=r"$y_{\gamma\gamma}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["Dipho_y"],
+    ),
 ]
 
-bjet_vars = [
+leading_bjet = [
     Var(
         name="bjet_pt",
         description="Leading b-jet transverse momentum",
         label=r"$p_{T, b_1}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1500),
         x_title=r"$p_{T, b_1}$",
         unit="GeV/c",
         input_branches=["bjet_pt"],
@@ -137,15 +137,6 @@ bjet_vars = [
         input_branches=["bjet_phi"],
     ),
     Var(
-        name="bjet_y",
-        description="Leading b-jet rapidity",
-        label=r"$y_{b_1}$",
-        x_title=r"$y_{b_1}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["bjet_y"],
-    ),
-    Var(
         name="bjet_eta",
         description="Leading b-jet pseudorapidity",
         label=r"$\eta_{b_1}$",
@@ -154,15 +145,24 @@ bjet_vars = [
         unit="",
         input_branches=["bjet_eta"],
     ),
+    Var(
+        name="bjet_y",
+        description="Leading b-jet rapidity",
+        label=r"$y_{b_1}$",
+        x_title=r"$y_{b_1}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["bjet_y"],
+    ),
 ]
 
-subleading_bjet_vars = [
+subleading_bjet = [
     Var(
         name="bjet2_pt",
         description="Subleading b-jet transverse momentum",
         label=r"$p_{T, b_2}$",
         x_title=r"$p_{T, b_2}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1000),
         unit="GeV/c",
         input_branches=["bjet2_pt"],
     ),
@@ -176,15 +176,6 @@ subleading_bjet_vars = [
         input_branches=["bjet2_phi"],
     ),
     Var(
-        name="bjet2_y",
-        description="Subleading b-jet rapidity",
-        label=r"$y_{b_2}$",
-        x_title=r"$y_{b_2}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["bjet2_y"],
-    ),
-    Var(
         name="bjet2_eta",
         description="Subleading b-jet pseudorapidity",
         label=r"$\eta_{b_2}$",
@@ -193,15 +184,24 @@ subleading_bjet_vars = [
         unit="",
         input_branches=["bjet2_eta"],
     ),
+    Var(
+        name="bjet2_y",
+        description="Subleading b-jet rapidity",
+        label=r"$y_{b_2}$",
+        x_title=r"$y_{b_2}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["bjet2_y"],
+    ),
 ]
 
-forward_jet_vars = [
+forward_jet = [
     Var(
         name="forward_jet_pt",
         description="Forward jet transverse momentum",
         label=r"$p_{T, j_f}$",
         x_title=r"$p_{T, j_f}$",
-        binning=(50, 0, 500),
+        binning=(100, 0, 1000),
         unit="GeV/c",
         input_branches=["fjet_pt"],
     ),
@@ -215,15 +215,6 @@ forward_jet_vars = [
         input_branches=["fjet_phi"],
     ),
     Var(
-        name="forward_jet_y",
-        description="Forward jet rapidity",
-        label=r"$y_{j_f}$",
-        x_title=r"$y_{j_f}$",
-        binning=(50, -2.5, 2.5),
-        unit="",
-        input_branches=["fjet_y"],
-    ),
-    Var(
         name="forward_jet_eta",
         description="Forward jet pseudorapidity",
         label=r"$\eta_{j_f}$",
@@ -231,6 +222,15 @@ forward_jet_vars = [
         binning=(50, -2.5, 2.5),
         unit="",
         input_branches=["fjet_eta"],
+    ),
+    Var(
+        name="forward_jet_y",
+        description="Forward jet rapidity",
+        label=r"$y_{j_f}$",
+        x_title=r"$y_{j_f}$",
+        binning=(50, -2.5, 2.5),
+        unit="",
+        input_branches=["fjet_y"],
     ),
 ]
 
@@ -276,7 +276,7 @@ event_vars = [
     ),
 ]
 
-vlq_vars = [
+vlq = [
     Var(
         name="VLQ_pt",
         description="Vector-like quark transverse momentum",
@@ -306,7 +306,7 @@ vlq_vars = [
     ),
 ]
 
-delta_r_vars = [
+deltaR = [
     #    Var(
     #        name="deltaR_leading_photon_bjet",
     #        description="Delta R between leading photon and leading b-jet",
@@ -335,13 +335,13 @@ delta_r_vars = [
     ),
 ]
 
-mass_vars = [
+masses = [
     Var(
         name="VLQ_mass",
         description="Vector-like quark invariant mass",
         label=r"$m_{VLQ}$",
         x_title=r"$m_{VLQ}$",
-        binning=(50, 500, 1500),
+        binning=(200, 100, 2500),
         unit="GeV/c²",
         input_branches=["B_mass"],
     ),
